@@ -4,7 +4,7 @@ public class Condicional {
     public static void main(String[] args) {
         positive();
         equals();
-
+        calculateArea();
     }
 
     // Crie um programa que solicite ao usuário digitar um número. Se o número for positivo, exiba "Número positivo",
@@ -41,6 +41,23 @@ public class Condicional {
 
     // Crie um menu que oferece duas opções ao usuário: "1. Calcular área do quadrado" e "2. Calcular área do círculo".
     // Solicite a escolha do usuário e realize o cálculo da área com base na opção selecionada.
+    static void calculateArea() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o número correspondente à ação que deseja executar:\n1. Calcular área do quadrado\n2. Calcular área do círculo\n\nSua opção:");
+        int option = scanner.nextInt();
+
+        if (option == 1) {
+            System.out.println("Qual o tamanho de cada lada do quadrado?");
+            float size = scanner.nextFloat();
+            System.out.println("A área desse quadrado é igual à: " + size * size);
+        } else if (option == 2) {
+            System.out.println("Qual o tamanho do raio do círculo?");
+            float radius = scanner.nextFloat();
+            System.out.println("A área desse círculo é igual à: " + Math.PI * radius * radius);
+        } else {
+            System.out.println("Opção inválida!!!");
+        }
+    }
 
     // Crie um programa que solicite ao usuário um número e exiba a tabuada desse número de 1 a 10.
 
