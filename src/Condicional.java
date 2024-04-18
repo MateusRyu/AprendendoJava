@@ -5,6 +5,7 @@ public class Condicional {
         positive();
         equals();
         calculateArea();
+        mathTable();
     }
 
     // Crie um programa que solicite ao usuário digitar um número. Se o número for positivo, exiba "Número positivo",
@@ -60,6 +61,17 @@ public class Condicional {
     }
 
     // Crie um programa que solicite ao usuário um número e exiba a tabuada desse número de 1 a 10.
+    static void mathTable() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Qual o número que gostaria de ver sua tabuada?");
+        int number = scanner.nextInt();
+
+        System.out.println("-".repeat(40));
+        for (int i = 1; i < 11; i++) {
+            System.out.println(number + " * " + i + " = " + i*number);
+        }
+        System.out.println("-".repeat(40));
+    }
 
     // Crie um programa que solicite ao usuário a entrada de um número inteiro. Verifique se o número é par ou ímpar e
     // exiba uma mensagem correspondente.
