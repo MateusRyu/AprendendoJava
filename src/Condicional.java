@@ -6,6 +6,7 @@ public class Condicional {
         equals();
         calculateArea();
         mathTable();
+        odd();
     }
 
     // Crie um programa que solicite ao usuário digitar um número. Se o número for positivo, exiba "Número positivo",
@@ -75,6 +76,20 @@ public class Condicional {
 
     // Crie um programa que solicite ao usuário a entrada de um número inteiro. Verifique se o número é par ou ímpar e
     // exiba uma mensagem correspondente.
+    static void odd() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insira um número inteiro:");
+        int number = scanner.nextInt();
+        String status;
+
+        if (number % 2 == 0) {
+            status = "par";
+        } else {
+            status = "ímpar";
+        }
+
+        System.out.println("O número " + number + " é " + status + "!");
+    }
 
     // Crie um programa que solicite ao usuário um número e calcule o fatorial desse número.
 }
